@@ -1,2 +1,2 @@
-# MyHyperland
-MyHyperland
+# MyHyprland
+MyHyprland
