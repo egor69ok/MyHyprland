@@ -1,6 +1,6 @@
 #!/bin/bash
 # Графика и шрифты
-sudo pacman -S --noconfirm hyprland kitty waybar swww wofi \
+sudo pacman -S --noconfirm hyprland waybar swww wofi \
 ttf-font-awesome noto-fonts swaylock-effects swaync grim slurp swappy
 
 # Установка yay (AUR)
