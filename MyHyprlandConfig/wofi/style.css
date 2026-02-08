@@ -1,0 +1,57 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+window {
+    margin: 0px;
+    background: transparent;
+}
+
+#outer-box {
+    margin: 5px;
+    padding: 10px;
+    background-color: #1e1e2e; /* Твой Catppuccin Mocha */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+#input {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #cdd6f4;
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#entry {
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #cdd6f4;
+}
+
+/* Стиль при выборе (аналог активного воркспейса) */
+#entry:selected {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #cba6f7; /* Твой Mauve */
+    outline: none; /* Убирает пунктирную рамку фокуса */
+}
+
+#text:selected {
+    color: #89b4fa; /* Твой Blue */
+}
+
+/* Убираем дефолтные рамки */
+#scroll {
+    border: none;
+}
+
+#inner-box {
+    border: none;
+}

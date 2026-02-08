@@ -1,0 +1,102 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 20,
+    "margin-top": 2,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/system_info", "network", "bluetooth", "pulseaudio", "battery", "tray"],
+
+    "custom/system_info": {
+        "format": " {cpu.usage}%  {memory.used:0.1G}  {disk.free}",
+        "tooltip": true,
+        "interval": 10
+    },
+
+    // Настройки отдельных модулей остаются, но используются внутри custom/system_info
+    "cpu": {
+        "format": "{usage}%"
+    },
+
+    "memory": {
+        "format": "{used:0.1G}",
+        "unit": "GB"
+    },
+
+    "disk": {
+        "format": "{free}",
+        "unit": "GB",
+        "path": "/"
+    },
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "urgent": ""
+        }
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "Off", 
+        "format-connected": " {device_alias}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 30,
+        "separate-outputs": true
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": " {:%H:%M  %d.%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "kitty --class=floating_mixer -e pulsemixer"
+    },
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "eth",
+        "format-disconnected": "No Internet",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
