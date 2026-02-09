@@ -20,7 +20,8 @@ window#waybar {
 #battery,
 #tray,
 #group-hardware { /* <-- Вот этот селектор отвечает за фон */
-    background: #1e1e2e;
+    /* background: #1e1e2e; */
+    background-color: rgba(30, 30, 46, 1.0);
     color: #cdd6f4;
     padding: 0 15px;
     margin: 4px 4px;
@@ -29,19 +30,28 @@ window#waybar {
 }
 
 /* Стили для модулей внутри группы железа */
-#cpu {
-    color: #cdd6f4;
-    padding: 0 5px;
-    background: #1e1e2e;
+#temperature {
+    color: #f38ba8; /* #cdd6f4; */
+    padding: 5px 5px 5px 16px;
+    background-color: rgba(30, 30, 46, 1.0);
     margin: 4px 0px;
     /* border-radius: 0 20px 20px 0; */
     border-radius: 20px 0 0 20px;
 }
 
+#cpu {
+    color: #cdd6f4;
+    padding: 0 5px;
+    background-color: rgba(30, 30, 46, 1.0);
+    margin: 4px 0px;
+    /* border-radius: 0 20px 20px 0; */
+    /* border-radius: 20px 0 0 20px; */
+}
+
 #memory {
     color: #cdd6f4;
     padding: 0 5px;
-    background: #1e1e2e;
+    background-color: rgba(30, 30, 46, 1.0);
     margin: 4px 0px;
     /* border-radius: 0 20px 20px 0; */
     /* border-radius: 20px 0 0 20px; */
@@ -50,7 +60,7 @@ window#waybar {
 #disk {
     color: #cdd6f4;
     padding: 0 15px 0 0;
-    background: #1e1e2e;
+    background-color: rgba(30, 30, 46, 1.0);
     margin: 4px 4px 4px 0;
     border-radius: 0 20px 20px 0;
     /* border-radius: 20px 0 0 20px; */
